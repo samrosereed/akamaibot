@@ -36,11 +36,33 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   firebase_core: ^3.6.0
+
   flutter_chat_ui: ^1.6.15
-  uuid: ^3.0.6
   flutter_chat_types: ^3.6.2
 
+  smooth_page_indicator: ^1.2.0+3
+  url_launcher: ^6.1.7
 
+#  caching images for faster loading
+  cached_network_image: ^3.4.1
+
+  uuid: ^4.5.1
+
+  firebase_auth: ^5.3.2
+  firebase_vertexai: ^1.0.2
+  flutter_markdown: ^0.7.4+1
+
+  http: ^1.2.2
+
+# permissions: location, camera, photo library, microphone
+  permission_handler: ^11.3.1
+  geolocator: ^9.0.2
+  shared_preferences: ^2.3.3
+
+#  audio tts and stt
+  speech_to_text: ^7.0.0
+  flutter_tts: ^4.1.0
+  audioplayers: ^6.1.0
 
 
 dev_dependencies:
@@ -59,7 +81,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/images/ai_avatar.jpeg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

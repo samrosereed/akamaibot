@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 
@@ -5,14 +6,16 @@ class ChatMessage extends StatelessWidget {
   final types.TextMessage message;
 
   const ChatMessage({
-    Key? key,
+    super.key,
     required this.message,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     final isBotMessage = message.metadata != null && message.metadata!['isBot'] == true;
-    print("Rendering message: ${message.text}, isBotMessage: $isBotMessage"); // Debug line
+    if (kDebugMode) {
+      print("Rendering message: ${message.text}, isBotMessage: $isBotMessage");
+    } // Debug line
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
